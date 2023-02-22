@@ -3,6 +3,8 @@ module github.com/openziti/zrok
 go 1.19
 
 require (
+	github.com/aws/aws-sdk-go-v2/config v1.18.13
+	github.com/aws/aws-sdk-go-v2/service/cognitoidentityprovider v1.22.2
 	github.com/charmbracelet/bubbles v0.14.0
 	github.com/charmbracelet/bubbletea v0.23.1
 	github.com/charmbracelet/lipgloss v0.6.0
@@ -34,7 +36,8 @@ require (
 	github.com/spf13/cobra v1.5.0
 	github.com/stretchr/testify v1.8.1
 	github.com/wneessen/go-mail v0.2.7
-	golang.org/x/net v0.0.0-20220425223048-2871e0cb64e4
+	golang.org/x/crypto v0.0.0-20220926161630-eccd6366d1be
+	golang.org/x/net v0.1.0
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
 
@@ -42,6 +45,17 @@ require (
 	github.com/Jeffail/gabs v1.4.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
 	github.com/atotto/clipboard v0.1.4 // indirect
+	github.com/aws/aws-sdk-go-v2 v1.17.4 // indirect
+	github.com/aws/aws-sdk-go-v2/credentials v1.13.13 // indirect
+	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.12.22 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.28 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.4.22 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/ini v1.3.29 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.9.22 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sso v1.12.2 // indirect
+	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.14.2 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sts v1.18.3 // indirect
+	github.com/aws/smithy-go v1.13.5 // indirect
 	github.com/aymanbagabas/go-osc52 v1.0.3 // indirect
 	github.com/cenkalti/backoff/v4 v4.1.3 // indirect
 	github.com/containerd/console v1.0.3 // indirect
@@ -95,10 +109,9 @@ require (
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	go.mongodb.org/mongo-driver v1.10.0 // indirect
 	go.mozilla.org/pkcs7 v0.0.0-20200128120323-432b2356ecb1 // indirect
-	golang.org/x/crypto v0.0.0-20220926161630-eccd6366d1be // indirect
-	golang.org/x/sys v0.0.0-20220926163933-8cfa568d3c25 // indirect
-	golang.org/x/term v0.0.0-20220919170432-7a66f970e087 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/sys v0.1.0 // indirect
+	golang.org/x/term v0.1.0 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

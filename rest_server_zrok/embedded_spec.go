@@ -520,6 +520,33 @@ func init() {
         }
       }
     },
+    "/oauth/authorize": {
+      "get": {
+        "tags": [
+          "share"
+        ],
+        "operationId": "oauthAuthenticate",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "state",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "code",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "testing"
+          }
+        }
+      }
+    },
     "/overview": {
       "get": {
         "security": [
@@ -670,6 +697,9 @@ func init() {
           },
           "404": {
             "description": "not found"
+          },
+          "422": {
+            "description": "Unprocessable entity. Incorrect enum?"
           },
           "500": {
             "description": "internal server error",
@@ -1181,6 +1211,18 @@ func init() {
           "items": {
             "type": "string"
           }
+        },
+        "oauthEmailDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "oauthProvider": {
+          "type": "string",
+          "enum": [
+            "amazon"
+          ]
         },
         "reserved": {
           "type": "boolean"
@@ -1798,6 +1840,33 @@ func init() {
         }
       }
     },
+    "/oauth/authorize": {
+      "get": {
+        "tags": [
+          "share"
+        ],
+        "operationId": "oauthAuthenticate",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "state",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "code",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "testing"
+          }
+        }
+      }
+    },
     "/overview": {
       "get": {
         "security": [
@@ -1948,6 +2017,9 @@ func init() {
           },
           "404": {
             "description": "not found"
+          },
+          "422": {
+            "description": "Unprocessable entity. Incorrect enum?"
           },
           "500": {
             "description": "internal server error",
@@ -2459,6 +2531,18 @@ func init() {
           "items": {
             "type": "string"
           }
+        },
+        "oauthEmailDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "oauthProvider": {
+          "type": "string",
+          "enum": [
+            "amazon"
+          ]
         },
         "reserved": {
           "type": "boolean"

@@ -431,6 +431,25 @@ paths:
         500:
           description: internal server error
 
+  /oauth/authorize:
+    get:
+      tags:
+        - share
+      operationId: oauthAuthenticate
+      parameters:
+        - name: state
+          in: query
+          type: string
+          required: true
+        - name: code
+          in: query
+          type: string
+          required: true
+      responses:
+        200:
+          description: testing
+
+
   /share:
     post:
       tags:
@@ -452,6 +471,8 @@ paths:
           description: unauthorized
         404:
           description: not found
+        422:
+          description: Unprocessable entity. Incorrect enum?
         500:
           description: internal server error
           schema:
@@ -780,6 +801,13 @@ definitions:
         type: array
         items:
           $ref: "#/definitions/authUser"
+      oauthProvider:
+        type: string
+        enum: [amazon]
+      oauthEmailDomains:
+        type: array
+        items:
+          type: string
       reserved:
         type: boolean
 

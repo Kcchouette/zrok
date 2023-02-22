@@ -196,6 +196,8 @@
  * @property {string} backendProxyEndpoint 
  * @property {string} authScheme 
  * @property {module:types.authUser[]} authUsers 
+ * @property {string} oauthProvider 
+ * @property {string[]} oauthEmailDomains 
  * @property {boolean} reserved 
  */
 

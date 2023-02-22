@@ -13,10 +13,12 @@ import (
 	"github.com/pkg/errors"
 )
 
-var cfg *Config
-var str *store.Store
-var mtr *metricsAgent
-var idb influxdb2.Client
+var (
+	cfg *Config
+	str *store.Store
+	mtr *metricsAgent
+	idb influxdb2.Client
+)
 
 func Run(inCfg *Config) error {
 	cfg = inCfg
@@ -48,6 +50,7 @@ func Run(inCfg *Config) error {
 	api.MetadataOverviewHandler = metadata.OverviewHandlerFunc(overviewHandler)
 	api.MetadataVersionHandler = metadata.VersionHandlerFunc(versionHandler)
 	api.ShareAccessHandler = newAccessHandler()
+	api.ShareOauthAuthenticateHandler = newOauthHandler()
 	api.ShareShareHandler = newShareHandler(cfg.Limits)
 	api.ShareUnaccessHandler = newUnaccessHandler()
 	api.ShareUnshareHandler = newUnshareHandler()
